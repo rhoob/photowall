@@ -5,6 +5,7 @@ import AddPhoto from './AddPhoto'
 import {Route, Link} from 'react-router-dom'
 import {removePost} from '../redux/actions'
 import Single from './Single'
+import ImageUpload from './ImageUpload'
 
 
 class Main extends Component {
@@ -39,6 +40,8 @@ class Main extends Component {
                 <Route path = "/single/:id" render = {(params) => (
                     <Single loading = {this.state.loading} {...this.props} {...params} /> 
                 )}/>
+
+                <ImageUpload/>
             </div>
             )
     }
